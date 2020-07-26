@@ -1,12 +1,16 @@
+const dotenv = require("dotenv").config();
 const express = require("express");
 const next = require("next");
 const path = require("path");
 const url = require("url");
 const cluster = require("cluster");
+const db = require("./data/database");
 const numCPUs = require("os").cpus().length;
 
 const dev = process.env.NODE_ENV !== "production";
 const port = process.env.PORT || 3000;
+
+db.initialize();
 
 // Multi-process to utilize all CPU cores.
 if (!dev && cluster.isMaster) {
