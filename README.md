@@ -2,7 +2,7 @@
 
 ## About
 
-Web application that allows authenticated users to set and track progress of goals. [digitized-goals.herokuapp.com](digitized-goals.herokuapp.com)
+Web application that allows authenticated users to set and track progress of goals. [digitized-goals.herokuapp.com](https://digitized-goals.herokuapp.com)
 
 ## Reference
 
