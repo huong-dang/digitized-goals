@@ -9,8 +9,6 @@ const initialize = () => {
     db.once("open", function () {
         console.log("success!");
     });
-
-    // const arr = await Movie.find({ year: { $gte: 1980, $lte: 1989 } });
 };
 
 module.exports = {
