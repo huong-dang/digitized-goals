@@ -1,4 +1,7 @@
 const dotenv = require("dotenv").config();
+var Logsene = require("logsene-js");
+var logger = new Logsene(process.env.LOGS_TOKEN);
+
 const mongoose = require("mongoose");
 
 const initialize = () => {
@@ -8,7 +11,10 @@ const initialize = () => {
     });
     const db = mongoose.connection;
     db.once("open", function () {
-        console.log("success!");
+        logger.log("info", "Hello, Logsene!", {
+            tags: ["a", "b"],
+            customField: "value here",
+        });
     });
 };
 
