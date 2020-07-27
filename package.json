@@ -15,7 +15,8 @@
         "mongoose": "^5.9.25",
         "next": "^9.4.4",
         "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "react-dom": "^16.8.6",
+        "sematext-agent-express": "^2.0.2"
     },
     "engines": {
         "node": "10.x"
