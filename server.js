@@ -39,6 +39,7 @@ if (!dev && cluster.isMaster) {
         if (!dev) {
             // Enforce SSL & HSTS in production
             server.use(function (req, res, next) {
+                stLogger.info("is this being logged");
                 var proto = req.headers["x-forwarded-proto"];
                 if (proto === "https") {
                     res.set({
