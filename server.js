@@ -6,13 +6,13 @@ const url = require("url");
 const cluster = require("cluster");
 const db = require("./data/database");
 const numCPUs = require("os").cpus().length;
-const { stLogger, stHttpLoggerMiddleware } = require("sematext-agent-express");
+// const { stLogger, stHttpLoggerMiddleware } = require("sematext-agent-express");
 
 const dev = process.env.NODE_ENV !== "production";
 const port = process.env.PORT || 3000;
 
 db.initialize();
-stLogger.info("Hello world!");
+// stLogger.info("Hello world!");
 
 // Multi-process to utilize all CPU cores.
 if (!dev && cluster.isMaster) {
@@ -34,12 +34,12 @@ if (!dev && cluster.isMaster) {
 
     nextApp.prepare().then(() => {
         const server = express();
-        server.use(stHttpLoggerMiddleware);
+        // server.use(stHttpLoggerMiddleware);
 
         if (!dev) {
             // Enforce SSL & HSTS in production
             server.use(function (req, res, next) {
-                stLogger.info("is this being logged");
+                // stLogger.info("is this being logged");
                 var proto = req.headers["x-forwarded-proto"];
                 if (proto === "https") {
                     res.set({
