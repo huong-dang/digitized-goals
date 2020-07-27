@@ -3,9 +3,9 @@
     "version": "3.0.0",
     "description": "Deploy Next.js server-side React apps using a custom Express server to Heroku",
     "scripts": {
-        "dev": "nodemon server.js -p $PORT",
+        "dev": "next dev",
         "build": "next build",
-        "start": "NODE_ENV=production node server.js -p $PORT"
+        "start": "next start"
     },
     "dependencies": {
         "@material-ui/core": "^4.11.0",
