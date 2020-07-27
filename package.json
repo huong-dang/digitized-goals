@@ -1,7 +1,7 @@
 {
     "name": "heroku-nextjs-custom-server-express",
     "version": "3.0.0",
-    "description": "Deploy Next.js server-side React apps using a custom Express server to Heroku",
+    "description": "Deploy Next.js frontend app with serverless APIs",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
